@@ -1,0 +1,27 @@
+{
+  "name": "chalk-stat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyZH/chalk-stat.git"
+  },
+  "author": "SkyZH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkyZH/chalk-stat/issues"
+  },
+  "homepage": "https://github.com/SkyZH/chalk-stat#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "debug": "^2.2.0",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.4.20",
+    "step": "^0.0.6"
+  }
+}
