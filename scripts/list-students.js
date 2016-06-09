@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Step = require('step');
 var _ = require('lodash');
-var debug = require('debug')("chalk:stat");
+var debug = require('debug')("chalk:stat:students");
 var Chalk = require('../Chalk');
 
 module.exports = (cb) => {

@@ -4,13 +4,13 @@ var _ = require('lodash');
 var debug = require('debug')("chalk:stat:students");
 var Chalk = require('../Chalk');
 
-module.exports = (id, cb) => {
+module.exports = (cb) => {
   Step(
     function() {
       debug("Collecting Data...");
-      Chalk.Student.find({studentId: id}, this);
+      Chalk.Type.find({}, this);
     },
-    require('./debug-student'),
+    require('./debug-types'),
     function(err) {
       debug("Complete");
       if(err) console.log(err);
