@@ -3,6 +3,7 @@ var debug = require('debug')("chalk:stat:types");
 
 module.exports = (TypeList) => {
   return function(err, students) {
+    if(err) console.error(err);
     var cnt = _.size(
       _(_.groupBy(students, "types")).forEach((students, types) => {
         var type_string = _

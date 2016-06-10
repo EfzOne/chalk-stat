@@ -3,7 +3,7 @@ var Step = require('step');
 var _ = require('lodash');
 var debug = require('debug')("chalk:stat:types");
 var Chalk = require('../Chalk');
-var Const = require('../Const');
+var Const = require('../const');
 
 module.exports = (cb) => {
   var TypeList = Const.type;

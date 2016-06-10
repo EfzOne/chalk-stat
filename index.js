@@ -12,7 +12,10 @@ program
   .option('-s, --student <n>', 'Show student information', parseInt)
   .option('--lc', 'List all courses')
   .option('-c, --course <n>', 'Show course information')
-  .option('-t, --type', 'Show type information')
+  .option('--lt', 'Show types information')
+  .option('-t, --types', 'Show type information')
+  .option('-o, --orgs', 'Show organization information')
+  .option('--teachers', 'Show teacher information')
   .parse(process.argv);
 
 Step(
@@ -22,9 +25,13 @@ Step(
     if(program.student) require('./scripts/list-student')(program.student, group());
     if(program.lc) require('./scripts/list-courses')(group());
     if(program.course) require('./scripts/list-course')(program.course, group());
-    if(program.type) require('./scripts/list-types')(group());
+    if(program.types) require('./scripts/list-type')(group());
+    if(program.lt) require('./scripts/list-types')(group());
+    if(program.orgs) require('./scripts/list-organizations')(group());
+    if(program.teachers) require('./scripts/list-teachers')(group());
   },
-  function() {
+  function(err) {
+    if(err) console.error(err);
     process.exit(0);
   }
 );
